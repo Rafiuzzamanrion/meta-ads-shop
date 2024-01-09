@@ -3,7 +3,8 @@ import {Link} from "react-router-dom";
 const Card = ({ product }) => {
   const { _id, name, image, } = product;
   return (
-    <div className="mt-16">
+    <div className="mt-16" data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
       <div className="card h-[500px] max-w-96 bg-base-100 shadow-xl border border-error">
         <figure className="px-10 pt-10">
           <img

@@ -5,6 +5,8 @@ import Services from "../Pages/Home/Services/Services";
 import DescriptionLayout from "../LayOuts/DescriptionLayout/DescriptionLayout";
 import Description from "../Pages/Description/Description";
 import axios from "axios";
+import Login from "../Pages/Login/Login";
+import SignUp from "../Pages/SignUp/SignUp";
 
 
 const router = createBrowserRouter([
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
         {
           path:'services',
           element:<Services></Services>
+        },
+        {
+          path:'login',
+          element:<Login></Login>
+        },
+        {
+          path:'signup',
+          element:<SignUp></SignUp>
         }
       ],
     },

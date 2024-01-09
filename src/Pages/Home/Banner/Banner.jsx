@@ -26,7 +26,8 @@ import banner5 from '/product-5.png'
 
 const Banner = () => {
     return (
-       <section className="mt-32 lg:mt-4 shadow-xl bg-base-100">
+       <section className="mt-28 shadow-xl bg-base-100"data-aos="zoom-out"data-aos-easing="linear"
+       data-aos-duration="600">
        
         <Swiper
         spaceBetween={30}

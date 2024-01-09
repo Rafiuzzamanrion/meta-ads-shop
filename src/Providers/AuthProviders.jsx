@@ -38,7 +38,7 @@ const AuthProviders = ({ children }) => {
     return signOut(auth);
   };
 
-  const LogInUser = (email, password) => {
+  const logInUser = (email, password) => {
     setLoading();
     return signInWithEmailAndPassword(auth, email, password);
   };
@@ -57,7 +57,7 @@ const AuthProviders = ({ children }) => {
     handleCreateUser,
     updateUserProfile,
     logOutUser,
-    LogInUser,
+    logInUser,
     forgotPassword,
     googleLogIn,
   };
