@@ -1,6 +1,6 @@
 import axios from "axios";
 import {useContext} from "react";
-import {useLoaderData} from "react-router-dom";
+import {useLoaderData, useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
 import {AuthContext} from "../../Providers/AuthProviders";
 import UseCart from "../../Hooks/UseCart";
@@ -13,10 +13,19 @@ const Description = () => {
     const {_id,name, image, price,description} = product;
     const {user} = useContext(AuthContext);
     const [,refetch] = UseCart();
+    const navigate = useNavigate();
 
     const handleAddToCart = ()=> {
       const cartData = {productId :_id, name:name, email:user?.email, price:price, image:image};
-
+      if(!user){
+        Swal.fire({
+          icon: "error",
+          title: "Login Now",
+          text: "Please login first to buy",
+        });
+        return navigate('/login')
+      }
+      
       axios.post('http://localhost:5000/cart',cartData)
       .then(res => {
         if(res.data.insertedId){

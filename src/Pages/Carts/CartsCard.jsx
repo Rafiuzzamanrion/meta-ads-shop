@@ -3,7 +3,7 @@ import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
 
 const CartsCard = ({ cart, refetch }) => {
-  const { name, image,  _id } =
+  const { name, image, price, _id } =
     cart;
 
     const handleDelete = (id) => {
@@ -34,13 +34,14 @@ const CartsCard = ({ cart, refetch }) => {
 
     }
   return (
-    <div className="card md:h-80 card-side bg-base-100 shadow-xl border border-orange-400">
+    <div className="card md:h-80 card-side bg-base-100 shadow-xl border border-error"data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
       <figure>
-        <img className="w-64 md:w-96 object-cover  hover:scale-110 hover:ease-in hover:duration-150" src={image} alt="Movie" />
+        <img className="w-64 md:w-96 object-cover lg:ps-10  hover:scale-110 hover:ease-in hover:duration-150" src={image} alt="Movie" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
-        
+        <p className="uppercase text-lg font-bold text-error">price : {price}</p>
         <div className="card-actions md:justify-end">
           <button onClick={()=> handleDelete(_id)} className="btn bg-error mr-5 hover:scale-110 hover:ease-in hover:duration-150 hover:bg-red-500">
             <MdDelete size={20} /> Delete

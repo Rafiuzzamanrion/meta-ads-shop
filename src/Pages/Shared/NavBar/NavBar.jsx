@@ -119,18 +119,18 @@ const NavBar = () => {
             className="mr-8 hover:border-b-4 hover:text-error hover:border-error"
             to="/about"
           >
-            ABOUT
+            ABOUT US
           </Link>
           <Link
             className="mr-8 hover:border-b-4 hover:text-error hover:border-error"
             to="/contact"
           >
-            CONTACT
+            CONTACT US
           </Link>
           {user ? (
             <Link
               className="mr-8 hover:border-b-4 hover:text-error hover:border-error"
-              to="/bookings"
+              to="/cart"
             >
               MY CART
             </Link>

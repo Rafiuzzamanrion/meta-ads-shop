@@ -73,7 +73,7 @@ const Login = () => {
                 
                 <input className="btn btn-error hover:bg-red-600 hover:scale-110 hover:duration-150 hover:ease-in" type="submit" value="Login" />
               </div>
-              <p className="text-sm ">New to Meta-Ads-Shop? <Link className='text-red-500 font-bold' to='/signup'> Sign Up</Link></p>
+              <p className="text-sm ps-5 ">Don&apos;t have an account? <Link className='text-red-500 font-bold' to='/signup'> Sign Up</Link></p>
               <SocialLogin></SocialLogin>
             </form>
 

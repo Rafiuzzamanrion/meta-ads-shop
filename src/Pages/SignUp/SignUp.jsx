@@ -127,7 +127,7 @@ const SignUp = () => {
                 
                 <input className="btn btn-error hover:bg-red-600 hover:scale-110 hover:duration-150 hover:ease-in" type="submit" value="Sign Up" />
               </div>
-              <p>Already have an account ? <Link className='text-red-500 font-bold' to='/login'> Login</Link></p>
+              <p className="ps-4">Already have an account ? <Link className='text-red-500 font-bold' to='/login'> Login</Link></p>
            <SocialLogin></SocialLogin>
             </form>
           
