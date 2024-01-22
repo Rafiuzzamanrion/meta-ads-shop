@@ -13,6 +13,9 @@ import ManageCustomers from "../Pages/AdminPage/ManageCustomers/ManageCustomers"
 import AdminRoutes from "./AdminRoutes";
 import PrivateRoutes from "./PrivateRoutes";
 import Contact from "../Pages/Contact/Contact";
+import ManageProduct from "../Pages/AdminPage/ManageProduct/ManageProduct";
+import AddProduct from "../Pages/AdminPage/AddProduct/AddProduct";
+import ManageOrder from "../Pages/AdminPage/ManageOrder/ManageOrder";
 
 
 const router = createBrowserRouter([
@@ -68,7 +71,20 @@ const router = createBrowserRouter([
       {
         path:'manageCustomers',
         element:<AdminRoutes><ManageCustomers></ManageCustomers></AdminRoutes>
-      }
+      },
+    {
+      path:'manageProduct',
+      element:<AdminRoutes><ManageProduct></ManageProduct></AdminRoutes>
+    },
+    {
+      path:'addProduct',
+      element:<AdminRoutes><AddProduct></AddProduct></AdminRoutes>
+    },
+    {
+      path:'manageOrder',
+      element:<AdminRoutes><ManageOrder></ManageOrder></AdminRoutes>
+    },
+    
       ]
     }
   ]);

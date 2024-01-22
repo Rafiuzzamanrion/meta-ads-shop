@@ -24,7 +24,7 @@ const AdminLayout = () => {
           
           <label
             htmlFor="my-drawer-2"
-            className="btn btn-outline drawer-button border-2 border-orange-400 hover:bg-orange-400 hover:text-black hover:scale-110 hover:ease-in hover:duration-150 lg:hidden my-5"
+            className="btn btn-outline drawer-button border-2 border-error hover:bg-error hover:text-black hover:scale-110 hover:ease-in hover:duration-150 lg:hidden my-5"
           >
           <RiMenu2Fill size={20} />  Menu
           </label>
@@ -44,13 +44,13 @@ const AdminLayout = () => {
              <Link className="hover:scale-110 hover:ease-in hover:duration-150"  to={'/admin/adminHome'}><FaHome size={20}/> Admin Home</Link>
             </li>
             <li>
-             <Link className="hover:scale-110 hover:ease-in hover:duration-150" ><TbShirtOff size={20}/> Manage Products</Link>
+             <Link to={'/admin/manageProduct'} className="hover:scale-110 hover:ease-in hover:duration-150" ><TbShirtOff size={20}/> Manage Products</Link>
             </li>
             <li>
-             <Link className="hover:scale-110 hover:ease-in hover:duration-150" ><FaShirt size={20}/> Add Product</Link>
+             <Link to={'/admin/addProduct'} className="hover:scale-110 hover:ease-in hover:duration-150" ><FaShirt size={20}/> Add Product</Link>
             </li>
             <li>
-             <Link className="hover:scale-110 hover:ease-in hover:duration-150" ><MdOutlineLibraryBooks size={20}/> Manage Orders</Link>
+             <Link to={'/admin/manageOrder'} className="hover:scale-110 hover:ease-in hover:duration-150" ><MdOutlineLibraryBooks size={20}/> Manage Orders</Link>
             </li>
             <li>
              <Link to={'/admin/manageCustomers'} className="hover:scale-110 hover:ease-in hover:duration-150" ><IoIosContacts size={20}/> Manage Customers</Link>
@@ -68,7 +68,7 @@ const AdminLayout = () => {
             <Link className="hover:scale-110 hover:ease-in hover:duration-150"  to={'/CustomerReview'}><MdRateReview size={20}/> Customer Review</Link>
            </li>
            <li>
-            <Link className="hover:scale-110 hover:ease-in hover:duration-150"  to={'/'}><MdContactMail size={20}/> Contact Us</Link>
+            <Link className="hover:scale-110 hover:ease-in hover:duration-150"  to={'/contact  '}><MdContactMail size={20}/> Contact Us</Link>
            </li>
           </ul>
         </div>
