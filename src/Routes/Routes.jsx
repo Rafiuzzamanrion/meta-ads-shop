@@ -16,6 +16,8 @@ import Contact from "../Pages/Contact/Contact";
 import ManageProduct from "../Pages/AdminPage/ManageProduct/ManageProduct";
 import AddProduct from "../Pages/AdminPage/AddProduct/AddProduct";
 import ManageOrder from "../Pages/AdminPage/ManageOrder/ManageOrder";
+import ProceedToCheckout from "../Pages/ProceedToCheckout/ProceedToCheckout";
+import Reviews from "../Pages/CustomerReviews/Reviews";
 
 
 const router = createBrowserRouter([
@@ -46,6 +48,14 @@ const router = createBrowserRouter([
         {
           path:'contact',
           element:<Contact></Contact>
+        },
+        {
+          path:'proceedToCheckout',
+          element:<ProceedToCheckout></ProceedToCheckout>
+        },
+        {
+          path:'customerReview',
+          element:<Reviews></Reviews>
         }
       ],
     },

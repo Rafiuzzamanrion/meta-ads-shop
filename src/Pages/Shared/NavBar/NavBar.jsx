@@ -33,7 +33,7 @@ const NavBar = () => {
     })
   }
   return (
-    <div className="navbar bg-base-200 h-5 mb-8 mt-4 rounded-lg">
+    <div className="navbar bg-base-200 h-5 mb-8 mt-4 rounded-lg shadow-xl">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -70,9 +70,9 @@ const NavBar = () => {
             </Link>
             <Link
               className="hover:border-b-4 hover:text-error hover:border-error"
-              to="/about"
+              to="/customerReview"
             >
-              About
+              Customer Review
             </Link>
             <Link
               className="hover:border-b-4 hover:text-error hover:border-error"
@@ -117,9 +117,9 @@ const NavBar = () => {
           </Link>
           <Link
             className="mr-8 hover:border-b-4 hover:text-error hover:border-error"
-            to="/about"
+            to="/customerReview"
           >
-            ABOUT US
+            CUSTOMER REVIEW
           </Link>
           <Link
             className="mr-8 hover:border-b-4 hover:text-error hover:border-error"
