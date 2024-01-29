@@ -12,15 +12,27 @@ const AdminHome = () => {
             return res.data;
         }  
     });
+
+
+    const {data:customerPayments = []} = useQuery({
+        queryKey: ['loadCustomerPayment'],
+        queryFn: async () => {
+            const res = await axios.get('http://localhost:5000/loadCustomerPayment');
+            return res.data;
+        }  
+    });
+
+    const totalSold = customerPayments?.reduce((sum,item)=> item.amount + sum,0);
+
     return (
         <div>
             <div className="grid grid-cols-2">
                <div>
-               <div className="w-72 h-56 bg-red-200 uppercase text-xl font-bold flex items-center justify-center ps-2">total sold : $2000</div>
+               <div className="w-72 h-56 bg-red-200 uppercase text-xl font-bold flex items-center justify-center ps-2">total sold : ${totalSold}</div>
                </div>
                 <div className="w-72 h-56 bg-green-200 uppercase text-xl font-bold flex items-center justify-center ps-2">total customer : {users.length}</div>
                 <div className="w-72 h-56 bg-teal-200 uppercase text-xl font-bold flex items-center justify-center ps-2">total products : {products.length}</div>
-                <div className="w-72 h-56 bg-blue-200 uppercase text-xl font-bold flex items-center justify-center ps-2">total sold product :</div>
+                <div className="w-72 h-56 bg-blue-200 uppercase text-xl font-bold flex items-center justify-center ps-2">total order sold : {customerPayments.length}</div>
                
             </div>
         </div>

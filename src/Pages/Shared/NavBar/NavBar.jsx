@@ -83,7 +83,7 @@ const NavBar = () => {
             {user ? (
               <Link
                 className="hover:border-b-4 hover:text-error hover:border-error"
-                to="/bookings"
+                to="/cart"
               >
                 My Cart
               </Link>
@@ -156,7 +156,7 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-md w-40 text-center border-error border-2 "
+              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-md w-32 text-center border-error border-2 "
             >
               <h1 className="border-b-2 border-error">Dashboard</h1>
 
@@ -164,7 +164,7 @@ const NavBar = () => {
                 <div>
                   <Link
                     to={"/admin/adminHome"}
-                    className="hover:text-error hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-2"
+                    className="hover:text-error hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center mt-2"
                   >
                     <MdAdminPanelSettings size={17} />
                     Admin Panel
@@ -174,7 +174,7 @@ const NavBar = () => {
                   </Link>
                 </div>
               ) : (
-                <div>
+                <div className="">
                   <Link
                     to={"/cart"}
                     className="hover:text-error hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1"
@@ -182,7 +182,7 @@ const NavBar = () => {
                     <GiShoppingCart size={18} /> My cart
                   </Link>
 
-                  <Link className="hover:text-error hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1">
+                  <Link to={'/history'} className="hover:text-error hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1">
                     <FaHistory size={15} /> History
                   </Link>
                   <Link className="hover:text-error hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1">

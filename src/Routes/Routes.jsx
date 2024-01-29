@@ -18,6 +18,8 @@ import AddProduct from "../Pages/AdminPage/AddProduct/AddProduct";
 import ManageOrder from "../Pages/AdminPage/ManageOrder/ManageOrder";
 import ProceedToCheckout from "../Pages/ProceedToCheckout/ProceedToCheckout";
 import Reviews from "../Pages/CustomerReviews/Reviews";
+import PendingPage from "../Pages/PendingPage/PendingPage";
+import CustomerPayment from "../Pages/CustomerPaymentHistory/CustomerPayment";
 
 
 const router = createBrowserRouter([
@@ -56,6 +58,14 @@ const router = createBrowserRouter([
         {
           path:'customerReview',
           element:<Reviews></Reviews>
+        },
+        {
+          path:'pendingPage',
+          element:<PendingPage></PendingPage>
+        },
+        {
+          path:'history',
+          element:<CustomerPayment></CustomerPayment>
         }
       ],
     },
