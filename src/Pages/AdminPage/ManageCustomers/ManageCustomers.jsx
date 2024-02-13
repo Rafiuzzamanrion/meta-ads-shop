@@ -7,7 +7,7 @@ const ManageCustomers = () => {
     const {data:users = [],refetch} = useQuery({
         queryKey: ['allUsers'],
         queryFn: async () => {
-            const res = await axios.get('http://localhost:5000/allUsers');
+            const res = await axios.get('https://facebook-ads-house-server.vercel.app/allUsers');
             return res.data;
         }  
     });

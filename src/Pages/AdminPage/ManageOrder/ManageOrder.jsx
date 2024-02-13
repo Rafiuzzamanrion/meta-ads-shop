@@ -11,7 +11,7 @@ const ManageOrder = () => {
     const {data:payments = [],refetch} = useQuery({
         queryKey:['paymentData'],
         queryFn:async()=>{
-            const res = await axios.get('http://localhost:5000/paymentData');
+            const res = await axios.get('https://facebook-ads-house-server.vercel.app/paymentData');
             return res.data;
         }
     })

@@ -16,7 +16,7 @@ const UserCard = ({ user, refetch }) => {
       confirmButtonText: "Yes, do it !",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.patch(`http://localhost:5000/updateUser?id=${id}`).then((res) => {
+        axios.patch(`https://facebook-ads-house-server.vercel.app/updateUser?id=${id}`).then((res) => {
           if (res.data.modifiedCount) {
             refetch();
             Swal.fire({
@@ -41,7 +41,7 @@ const UserCard = ({ user, refetch }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/deleteUser?id=${id}`)
+          .delete(`https://facebook-ads-house-server.vercel.app/deleteUser?id=${id}`)
           .then((res) => {
             if (res.data.deletedCount > 0) {
               refetch();

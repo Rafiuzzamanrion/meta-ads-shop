@@ -14,7 +14,7 @@ const Reviews = () => {
   const { data: reviews = [],refetch } = useQuery({
     queryKey: ["reviews"],
     queryFn: async () => {
-      const res = await axios.get("http://localhost:5000/reviews");
+      const res = await axios.get("https://facebook-ads-house-server.vercel.app/reviews");
       return res.data;
     },
   });
@@ -37,7 +37,7 @@ const Reviews = () => {
 
      const newRating = parseInt(rating.slice(' ')[1]);
      const reviewData = {name:name,rating:newRating,details:description};
-      axios.post('http://localhost:5000/addReview',reviewData)
+      axios.post('https://facebook-ads-house-server.vercel.app/addReview',reviewData)
       .then(res => {
         if(res.data.insertedId){
           refetch();

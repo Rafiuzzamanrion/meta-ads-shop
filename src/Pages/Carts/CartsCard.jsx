@@ -16,7 +16,7 @@ const CartsCard = ({ cart, refetch }) => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-              axios.delete(`http://localhost:5000/deleteCart?id=${id}`)
+              axios.delete(`https://facebook-ads-house-server.vercel.app/deleteCart?id=${id}`)
               .then(res => {
                 refetch();
                 if(res.data.deletedCount > 0){

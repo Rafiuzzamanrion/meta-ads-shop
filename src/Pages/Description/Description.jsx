@@ -26,7 +26,7 @@ const Description = () => {
         return navigate('/login')
       }
       
-      axios.post('http://localhost:5000/cart',cartData)
+      axios.post('https://facebook-ads-house-server.vercel.app/cart',cartData)
       .then(res => {
         if(res.data.insertedId){
           refetch();

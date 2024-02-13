@@ -12,7 +12,7 @@ const UseAdmin = () => {
         queryKey:['isAdmin',user?.email],
         enabled:!loading ,
         queryFn: async ()=> {
-            const res = await axios.get(`http://localhost:5000/isAdmin?email=${user?.email}`);
+            const res = await axios.get(`https://facebook-ads-house-server.vercel.app/isAdmin?email=${user?.email}`);
             return res.data;
         }
     })

@@ -131,7 +131,7 @@ const ProceedToCheckout = () => {
              
               // ============== hosting end ======================
               // ============== post the product to database ===============
-              axios.post("http://localhost:5000/payment", newItem).then((data) => {
+              axios.post("https://facebook-ads-house-server.vercel.app/payment", newItem).then((data) => {
                 if (data.data.insertedId) {
                   refetch();
                   reset();
@@ -149,7 +149,7 @@ const ProceedToCheckout = () => {
       }
     });
 
-           axios.delete(`http://localhost:5000/deleteCarts?email=${user?.email}`)
+           axios.delete(`https://facebook-ads-house-server.vercel.app/deleteCarts?email=${user?.email}`)
            .then(() =>{
             refetch()
            } )

@@ -76,7 +76,7 @@ const router = createBrowserRouter([
         {
           path:':id',
           element:<Description></Description>,
-          loader:({params})=> fetch(`http://localhost:5000/description/${params.id}`)
+          loader:({params})=> fetch(`https://facebook-ads-house-server.vercel.app/description/${params.id}`)
         }
       ]
     },

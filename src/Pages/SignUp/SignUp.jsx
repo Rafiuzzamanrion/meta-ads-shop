@@ -64,7 +64,7 @@ const SignUp = () => {
 
         //   ---------------- post user to database -----------------
         const saveUser = {name:name, email:email}
-        axios.post('http://localhost:5000/users',saveUser)
+        axios.post('https://facebook-ads-house-server.vercel.app/users',saveUser)
         .then(res => {
             if(res.data.insertedId){
                 Swal.fire({

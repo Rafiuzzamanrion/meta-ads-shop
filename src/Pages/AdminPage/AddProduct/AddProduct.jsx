@@ -46,7 +46,7 @@ const AddProduct = () => {
               // Math.random().toString(16).slice(2, 16)
               // ============== hosting end ======================
               // ============== post the product to database ===============
-              axios.post("http://localhost:5000/product", newItem).then((data) => {
+              axios.post("https://facebook-ads-house-server.vercel.app/product", newItem).then((data) => {
                 if (data.data.insertedId) {
                   reset();
                   Swal.fire(

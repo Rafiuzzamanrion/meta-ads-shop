@@ -9,7 +9,7 @@ const ManageOrderCard = ({payment,refetch}) => {
 
     const handleApprove = (id)=> {
 
-      axios.patch(`http://localhost:5000/approveOrder?id=${id}`)
+      axios.patch(`https://facebook-ads-house-server.vercel.app/approveOrder?id=${id}`)
       .then(res => {
         console.log(res.data)
         if(res.data.modifiedCount){
@@ -20,7 +20,7 @@ const ManageOrderCard = ({payment,refetch}) => {
             "success"
           );
           const customerPaymentData = {name:name,productNames:productNames,image:image,status:res.data.modifiedCount? 'approved':'pending', paymentMethod:paymentMethod,amount:amount,time:time,email:email};
-          axios.post('http://localhost:5000/customerPayment',customerPaymentData)
+          axios.post('https://facebook-ads-house-server.vercel.app/customerPayment',customerPaymentData)
           .then(res => {
             console.log(res.data)
           })

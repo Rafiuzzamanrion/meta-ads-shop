@@ -3,18 +3,20 @@ import {useContext} from 'react';
 import {AuthContext} from '../Providers/AuthProviders';
 import axios from 'axios';
 import Swal from 'sweetalert2';
-import {useNavigate} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 
 const SocialLogin = () => {
  const {googleLogIn} = useContext(AuthContext);
  const navigate = useNavigate();
+ const location = useLocation();
+ const from = location.state?.from?.pathname || "/"
  const handleGoogleLogIn = () => {
     googleLogIn()
     .then(result => {
         const loggedInUser = result.user;
         const saveUser = {name:loggedInUser.displayName, email:loggedInUser.email}
 
-        axios.post("http://localhost:5000/users", saveUser)
+        axios.post("https://facebook-ads-house-server.vercel.app/users", saveUser)
         .then((data) => {
             if (data.data.insertedId) {
               Swal.fire({
@@ -24,7 +26,7 @@ const SocialLogin = () => {
                 showConfirmButton: false,
                 timer: 1500,
               });
-              navigate("/");
+              navigate(from ,{replace:true});
             }
             else{
               Swal.fire({
@@ -34,7 +36,7 @@ const SocialLogin = () => {
                 showConfirmButton: false,
                 timer: 1500,
               });
-              navigate('/');
+              navigate(from ,{replace:true});
             }
           });
         })
