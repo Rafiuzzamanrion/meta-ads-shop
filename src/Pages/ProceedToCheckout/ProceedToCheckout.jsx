@@ -5,7 +5,6 @@ import image2 from "/wise.jpg";
 import image3 from "/payoneer.png";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { IoIosArrowForward } from "react-icons/io";
 import axios from "axios";
 import {useForm} from "react-hook-form";
 import {useContext} from "react";
@@ -163,7 +162,7 @@ const ProceedToCheckout = () => {
         <title>Meta-ads-shop | Proceed to checkout</title>
       </Helmet>
       <h1 data-aos="flip-left"data-aos-easing="linear"
-    data-aos-duration="500" className="text-center font-bold text-xl uppercase bg-base-100 shadow-md w-96 my-5 py-16 rounded-md px-2 border border-error">
+    data-aos-duration="500" className="text-center font-bold text-xl uppercase bg-base-100 shadow-md lg:w-96 my-5 py-16 rounded-md px-2 border border-error">
         total payable amount :{" "}
         <span className="text-error">${totalAmount}</span>
       </h1>
@@ -177,7 +176,7 @@ const ProceedToCheckout = () => {
               data-aos="zoom-in"
               data-aos-easing="linear"
               data-aos-duration="500"
-              className="w-64 object-cover"
+              className="md:w-64 object-cover"
               src={image1}
               alt=""
             />
@@ -187,7 +186,7 @@ const ProceedToCheckout = () => {
               data-aos="zoom-in"
               data-aos-easing="linear"
               data-aos-duration="500"
-              className="w-64 object-cover"
+              className="md:w-64 object-cover"
               src={image2}
               alt=""
             />
@@ -197,7 +196,7 @@ const ProceedToCheckout = () => {
               data-aos="zoom-in"
               data-aos-easing="linear"
               data-aos-duration="500"
-              className="w-64 object-cover"
+              className="md:w-64 object-cover"
               src={image3}
               alt=""
             />
@@ -215,7 +214,7 @@ const ProceedToCheckout = () => {
       </h1>
 
       <div
-        className="shadow-2xl bg-base-100 p-5 lg:w-2/3 rounded-lg mt-10"
+        className="shadow-2xl bg-base-100 p-5 md:w-2/3 rounded-lg mt-10"
         data-aos="zoom-in"
         data-aos-easing="linear"
         data-aos-duration="500"
@@ -225,30 +224,24 @@ const ProceedToCheckout = () => {
         </div>
         <div className="divider"></div>
         <div className="flex gap-3 items-center">
-          <h1 className="font-bold flex flex-row items-center text-warning">
-            Binance Account
-            <IoIosArrowForward size={20} />{" "}
-            <span className="text-black">mesbahulhasan48@gmail.com</span>
+          <h1 className="font-bold items-center text-warning">
+            Binance :<span className="text-black"> mesbahulhasan48@gmail.com</span>
           </h1>
           <button className="btn btn-outline btn-sm" onClick={copyToClipboardBinanceAccount}>
             copy
           </button>
         </div>
         <div className="flex gap-3 items-center my-3">
-          <h1 className="font-bold flex flex-row items-center text-warning">
-            Binance Pay ID
-            <IoIosArrowForward size={20} />
-            <span className="text-black font-semibold">424805724</span>
+          <h1 className="font-bold items-center text-warning">
+          Pay ID :<span className="text-black font-semibold"> 424805724</span>
           </h1>
           <button className="btn btn-outline btn-sm" onClick={copyToClipboardBinanceId}>
             copy
           </button>
         </div>
         <div className="flex gap-3 items-center my-3">
-          <h1 className="font-bold flex flex-row items-center text-warning">
-            Binance TRC20 address 
-            <IoIosArrowForward size={20} />
-            <span className="text-black font-semibold">TUWoPYmJkDXTmiy4YhBWzZFQNnCZYxzhzg</span>
+          <h1 className="font-bold items-center text-warning">
+          TRC20 address : <span className="text-black font-semibold">TUWoPYmJkDXTmiy4YhBWzZFQNnCZYxzhzg</span>
           </h1>
           <button className="btn btn-outline btn-sm" onClick={copyToClipboardBinanceTrc20}>
             copy
@@ -267,10 +260,8 @@ const ProceedToCheckout = () => {
         </div>
         <div className="divider"></div>
         <div className="flex gap-3 items-center">
-          <h1 className="font-bold flex flex-row items-center text-blue-500">
-            Wise Account
-            <IoIosArrowForward size={20} />{" "}
-            <span className="text-black">roni.official.rn@gmail.com</span>
+          <h1 className="font-bold text-center text-blue-500">
+          <span className="text-black"> roni.official.rn@gmail.com</span>
           </h1>
           <button className="btn btn-outline btn-sm" onClick={copyToClipboardWise}>
             copy
@@ -290,9 +281,7 @@ const ProceedToCheckout = () => {
         <div className="divider"></div>
         <div className="flex gap-3 items-center">
           <h1 className="font-bold flex flex-row items-center text-pink-500">
-            Payoneer Account
-            <IoIosArrowForward size={20} />{" "}
-            <span className="text-black">mesbahulhasanofficial@gmail.com</span>
+           <span className="text-black">mesbahulhasanofficial@gmail.com</span>
           </h1>
           <button className="btn btn-outline btn-sm" onClick={copyToClipboardPayoneer}>
             copy
