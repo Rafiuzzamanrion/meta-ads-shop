@@ -35,6 +35,8 @@ const AdminHome = () => {
                 <div className="w-72 h-56 bg-blue-200 uppercase text-xl font-bold flex items-center justify-center ps-2 rounded-md">total order sold : {customerPayments.length}</div>
                
 
+
+
                
             </div>
         </div>
