@@ -14,7 +14,7 @@ const PendingPage = () => {
                 
                 <h1 className="font-bold text-lg my-8 text-center">Please wait our team will immediately approved your order</h1>
                 <h1 className="text-4xl font-bold text-center my-2">PLEASE</h1>
-                <h1 className="text-4xl font-bold text-center link-hover uppercase text-orange-400"><Link to={'/contact'}>Contact with us </Link></h1>
+                <h1 className="text-4xl font-bold text-center link uppercase text-orange-400"><Link to={'/contact'}>Contact with us </Link></h1>
                 
             </div>
         </div>

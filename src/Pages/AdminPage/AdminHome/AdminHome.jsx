@@ -26,7 +26,7 @@ const AdminHome = () => {
 
     return (
         <div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
                <div>
                <div className="w-72 h-56 bg-red-200 uppercase text-xl font-bold flex items-center justify-center ps-2 rounded-md">total sold : ${totalSold}</div>
                </div>
