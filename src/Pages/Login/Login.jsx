@@ -4,6 +4,7 @@ import {useContext} from "react";
 import {AuthContext} from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
 import SocialLogin from "../../components/SocialLogin";
+import {Helmet} from "react-helmet-async";
 
 
 const Login = () => {
@@ -43,6 +44,9 @@ const Login = () => {
     }
     return (
         <div>
+          <Helmet>
+            <title>Meta-ads-shop | Login</title>
+          </Helmet>
            <div className="hero min-h-screen bg-base-200 rounded-xl">
         <div className="hero-content flex-col lg:flex-row">
           <div className="mr-16 w-1/2 pt-7">

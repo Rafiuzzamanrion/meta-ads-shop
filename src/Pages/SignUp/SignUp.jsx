@@ -5,6 +5,7 @@ import {AuthContext} from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
 import axios from "axios";
 import SocialLogin from "../../components/SocialLogin";
+import {Helmet} from "react-helmet-async";
 
 
 const SignUp = () => {
@@ -92,6 +93,9 @@ const SignUp = () => {
     }
     return (
         <div>
+          <Helmet>
+            <title>Meta-ads-shop | sign up</title>
+          </Helmet>
             <div className="hero min-h-screen bg-base-200 rounded-xl">
         
         <div className="hero-content flex-col lg:flex-row">

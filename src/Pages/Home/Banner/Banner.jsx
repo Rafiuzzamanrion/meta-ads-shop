@@ -20,6 +20,7 @@ import banner2 from '/product-2.png'
 import banner3 from '/product-3.png'
 import banner4 from '/product-4.png'
 import banner5 from '/product-5.png'
+import {Helmet} from "react-helmet-async";
 
 
 
@@ -28,7 +29,9 @@ const Banner = () => {
     return (
        <section className="mt-28 shadow-xl bg-base-100"data-aos="zoom-out"data-aos-easing="linear"
        data-aos-duration="600">
-       
+       <Helmet>
+        <title>Meta-ads-shop | Home</title>
+       </Helmet>
         <Swiper
         spaceBetween={30}
         centeredSlides={true}

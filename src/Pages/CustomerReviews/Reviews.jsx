@@ -9,6 +9,7 @@ import "swiper/css/autoplay";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Swal from "sweetalert2";
+import {Helmet} from "react-helmet-async";
 
 const Reviews = () => {
   const { data: reviews = [],refetch } = useQuery({
@@ -57,6 +58,9 @@ const Reviews = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Meta-ads-shop | Customer Review</title>
+      </Helmet>
       <h1 className="text-4xl text-black text-center font-semibold my-16">
         Customer <span className="text-error">Review</span>
       </h1>

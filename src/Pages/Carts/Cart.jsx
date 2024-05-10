@@ -11,7 +11,7 @@ const Cart = () => {
         <div>
            <div className="flex flex-col justify-center items-center">
             <Helmet>
-                <title>Amazon | My cart</title>
+                <title>Meta-ads-shop | My cart</title>
             </Helmet>
             <h1 className="text-4xl text-center font-bold uppercase">Products <span className="text-error">Cart</span></h1>
 

@@ -219,7 +219,7 @@ const ProceedToCheckout = () => {
         data-aos-easing="linear"
         data-aos-duration="500"
       >
-        <div className="flex justify-center items-center">
+        <div className="justify-center items-center">
           <img className="w-44 h-28 object-cover" src={image1} alt="" />
         </div>
         <div className="divider"></div>
@@ -231,7 +231,7 @@ const ProceedToCheckout = () => {
             copy
           </button>
         </div>
-        <div className="flex gap-3 items-center my-3">
+        <div className="gap-3 items-center my-3">
           <h1 className="font-bold items-center text-warning">
           Pay ID :<span className="text-black font-semibold"> 424805724</span>
           </h1>
@@ -239,7 +239,7 @@ const ProceedToCheckout = () => {
             copy
           </button>
         </div>
-        <div className="flex gap-3 items-center my-3">
+        <div className="gap-3 items-center my-3">
           <h1 className="font-bold items-center text-warning">
           TRC20 address : <span className="text-black font-semibold">TUWoPYmJkDXTmiy4YhBWzZFQNnCZYxzhzg</span>
           </h1>
