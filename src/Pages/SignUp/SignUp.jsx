@@ -63,6 +63,7 @@ const SignUp = () => {
             console.log(error);
           });
 
+          
         //   ---------------- post user to database -----------------
         const saveUser = {name:name, email:email}
         axios.post('https://facebook-ads-house-server.vercel.app/users',saveUser)
